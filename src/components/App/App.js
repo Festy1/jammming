@@ -52,9 +52,12 @@ function App() {
   }, [alertMessage]);
 
   //the search method is the last method added to this function component
-  const search = useCallback((term) => {
-    Spotify.search(term).then(setSearchResults);
-  }, []);
+  const search = useCallback(
+    (term) => {
+      Spotify.search(term).then(setSearchResults);
+    },
+    [setSearchResults]
+  );
 
   //This is for adding Tracks
   const addTrack = useCallback(
@@ -67,16 +70,22 @@ function App() {
   );
 
   //This is for removing Tracks.
-  const removeTrack = useCallback((track) => {
-    setPlaylistTracks((prevTracks) =>
-      prevTracks.filter((playlistTrack) => playlistTrack.id !== track.id)
-    );
-  }, []);
+  const removeTrack = useCallback(
+    (track) => {
+      setPlaylistTracks((prevTracks) =>
+        prevTracks.filter((playlistTrack) => playlistTrack.id !== track.id)
+      );
+    },
+    [setPlaylistTracks]
+  );
 
   //This part update the playlist name
-  const updatePlaylistName = useCallback((name) => {
-    setPlaylistName(name);
-  }, []);
+  const updatePlaylistName = useCallback(
+    (name) => {
+      setPlaylistName(name);
+    },
+    [setPlaylistName]
+  );
 
   //This part updates the playlist to spotify
   const savePlaylist = useCallback(() => {
