@@ -4,6 +4,8 @@ import "./SearchBar.css";
 function SearchBar(props) {
   const [term, setTerm] = useState("");
 
+  const { onSearch } = props;
+
   const handleTermChange = useCallback((event) => {
     setTerm(event.target.value);
   }, []);
@@ -11,9 +13,9 @@ function SearchBar(props) {
   const search = useCallback(
     (event) => {
       event.preventDefault();
-      props.onSearch(term);
+      onSearch(term);
     },
-    [props.onSearch, term]
+    [onSearch, term]
   );
 
   return (
