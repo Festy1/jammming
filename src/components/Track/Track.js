@@ -4,23 +4,30 @@ import "./Track.css";
 function Track(props) {
   const [isPlaying, setIsPlaying] = useState(false); //this handles the preview mp3 controls
 
-  //for adding track
-  const addTrack = useCallback(
-    (event) => {
-      event.preventDefault();
-      props.onAdd(props.track);
-    },
-    [props.onAdd, props.track]
-  );
+  // //for adding track
+  // const addTrack = useCallback(
+  //   (event) => {
+  //     props.onAdd(props.track);
+  //   },
+  //   [props.onAdd, props.track]
+  // );
+  const addTrack = useCallback(() => {
+    const { onAdd, track } = props;
+    onAdd(track);
+  }, [props]);
 
-  //for removing track
-  const removeTrack = useCallback(
-    (event) => {
-      event.preventDefault();
-      props.onRemove(props.track);
-    },
-    [props.onRemove, props.track]
-  );
+  // //for removing track
+  // const removeTrack = useCallback(
+  //   (event) => {
+  //     props.onRemove(props.track);
+  //   },
+  //   [props.onRemove, props.track]
+  // );
+
+  const removeTrack = useCallback(() => {
+    const { onRemove, track } = props;
+    onRemove(track);
+  }, [props]);
 
   //this is for playing preview
   const playPreview = () => {

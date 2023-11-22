@@ -3,11 +3,20 @@ import "./Playlist.css";
 import TrackList from "../TrackList/TrackList";
 
 function Playlist(props) {
+  // const handleNameChange = useCallback(
+  //   (e) => {
+  //     props.onNameChange(e.target.value);
+  //   },
+  //   [props.onNameChange]
+  // );
+
+  //using props destructuring method
+  const { onNameChange } = props;
   const handleNameChange = useCallback(
     (e) => {
-      props.onNameChange(e.target.value);
+      onNameChange(e.target.value);
     },
-    [props.onNameChange]
+    [onNameChange]
   );
 
   const handleSave = async () => {
