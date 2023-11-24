@@ -4,6 +4,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import Playlist from "../Playlist/Playlist";
 import Spotify from "../../util/Spotify";
+import Footer from "../Footer/Footer";
 
 function App() {
   const [searchResults, setSearchResults] = useState([
@@ -108,9 +109,9 @@ function App() {
   }, [playlistName, playlistTracks]);
 
   return (
-    <div>
+    <div className="start">
       <h1>
-        Ja<span className="highlight">mmm</span>ing
+        Ja<span className="highlight">m🎶m</span>ing
       </h1>
       <div className="App">
         {/* <!-- Add a SearchBar component -->  */}
@@ -131,6 +132,9 @@ function App() {
           />
           {alertMessage && <div className="alert">{alertMessage}</div>}
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

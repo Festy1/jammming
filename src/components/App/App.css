@@ -7,6 +7,10 @@ html,
 html {
   font-size: 18px;
 }
+.start {
+  display: flex;
+  flex-direction: column;
+}
 
 h1 {
   padding: 0.77rem 0;
@@ -29,7 +33,9 @@ h2 {
 .App {
   height: 100%;
   padding: 0 10% 10% 10%;
-  background-image: url("./background_photo_desktop.jpg");
+  background: linear-gradient(45deg, #3498db, #8e44ad, #e74c3c, #1abc9c);
+
+  background-image: url("./background-image1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

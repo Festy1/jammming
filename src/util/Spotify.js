@@ -1,6 +1,6 @@
 const clientID = process.env.REACT_APP_NOT_SECRET_CODE;
-const redirectURI = "https://myspotify-playlist.netlify.app";
-//http://localhost:3000/
+const redirectURI = "http://localhost:3000/"; //"https://myspotify-playlist.netlify.app";
+
 let accessToken;
 
 const Spotify = {

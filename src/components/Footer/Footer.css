@@ -1,0 +1,23 @@
+small {
+  display: flex;
+  padding: 1rem;
+  background-color: #010c3f;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.77rem;
+  color: #fff;
+}
+
+small p {
+  margin-left: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+small a {
+  text-decoration: none;
+  color: #fff;
+}
+small a:hover {
+  color: blueviolet;
+}
