@@ -6,7 +6,9 @@ function Footer() {
       <small>
         designed by{" "}
         <p>
-          <a href="https://github.com/Festy1">Festy1.</a>
+          <a href="https://github.com/Festy1" target="_blank">
+            Festy1.
+          </a>
         </p>
       </small>
     </div>
